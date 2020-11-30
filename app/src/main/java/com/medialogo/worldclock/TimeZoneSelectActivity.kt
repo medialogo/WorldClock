@@ -24,7 +24,7 @@ class TimeZoneSelectActivity : AppCompatActivity() {
             // タップされた位置のタイムゾーンを得る
             val timeZone = adapter.getItem(position)
 
-            // 繊維元の画面に結果を返す
+            // 遷移元の画面に結果を返す
             val result = Intent()
             result.putExtra("timeZone", timeZone)
             setResult(Activity.RESULT_OK, result)

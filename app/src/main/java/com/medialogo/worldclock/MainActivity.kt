@@ -3,12 +3,14 @@ package com.medialogo.worldclock
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
+//import kotlinx.android.syntehetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,9 +44,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultcode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultcode, data)
-        // タイムゾーン選択画面からの戻り
-        // 新たなタイムゾーンが追加された場合
+        super.onActivityResult(requestCode, resultcode, data)
+        /*
+        タイムゾーン選択画面からの戻り
+        新たなタイムゾーンが追加された場合
+        */
         if (requestCode == 1
             && resultcode == Activity.RESULT_OK
             && data != null) {
